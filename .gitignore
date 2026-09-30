@@ -1,0 +1,10 @@
+.env
+venv/
+__pycache__/
+*.pyc
+data/uploads/*.pdf
+data/uploads/*.tmp
+data/vector_store/index.faiss
+data/vector_store/index.pkl
+data/vector_store/document_info.json
+.pytest_cache/

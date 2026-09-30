@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Document Q&amp;A</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>AI Document Q&amp;A</h1>
+      <p class="subtitle">Upload a PDF and ask questions about its contents. Answers come only from your document.</p>
+    </header>
+
+    <section class="card" aria-label="Upload document">
+      <h2>1. Upload PDF</h2>
+      <div class="row">
+        <input type="file" id="pdfFile" accept="application/pdf,.pdf" />
+        <button id="uploadBtn">Upload &amp; Process</button>
+      </div>
+      <p id="uploadStatus" class="status" role="status"></p>
+    </section>
+
+    <section class="card" aria-label="Ask a question">
+      <h2>2. Ask a question</h2>
+      <div class="row">
+        <input type="text" id="questionInput" placeholder="What is this document about?" disabled />
+        <button id="askBtn" disabled>Ask</button>
+      </div>
+      <p id="askStatus" class="status" role="status"></p>
+    </section>
+
+    <section class="card hidden" id="answerCard" aria-label="Answer">
+      <h2>Answer</h2>
+      <div id="answer" class="answer"></div>
+      <h3>Sources</h3>
+      <div id="sources" class="sources"></div>
+    </section>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
